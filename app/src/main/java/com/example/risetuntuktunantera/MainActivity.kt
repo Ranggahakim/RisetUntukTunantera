@@ -45,7 +45,7 @@ fun Greeting(name: String) {
             verticalArrangement = Arrangement.Center
         ) {
             Text("Hello Geys $name!", fontSize = 24.sp)
-            Text("Lopyu", fontSize = 20.sp)
+            Text("Rangga & Farel", fontSize = 20.sp)
             ClickButton(
                 onClick = ::showHiddenText)
             NotifText()
@@ -82,7 +82,7 @@ fun NotifText()
 }
 
 fun randomText(): String {
-    val newText = "halo"
+    val newText = "lopyu"
 
     return newText
 }
