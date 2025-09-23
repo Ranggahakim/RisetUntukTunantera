@@ -16,7 +16,25 @@ android {
         versionName = "1.0"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        externalNativeBuild {
+            cmake {
+                cppFlags.add("-std=c++11")
+            }
+        }
+
+        ndk {
+            // Pilih arsitektur yang kamu ingin build (misal: arm64-v8a, armeabi-v7a, dll)
+            abiFilters.addAll(listOf("arm64-v8a", "armeabi-v7a"))
+        }
+
     }
+
+
+    externalNativeBuild {
+        cmake {
+            path = file("CMakeLists.txt") // Use file() to specify it's a file path
+        }    }
+
 
     buildTypes {
         release {
